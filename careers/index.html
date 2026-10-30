@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Careers at Trafforge</title>
+<meta name="description" content="Open engineering roles at Trafforge. Work on payments, lending, compliance and core banking systems for fintech companies and banks across the US.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1F3F5;--surface:#FFFFFF;--surface-2:#F6F7F9;--ink:#161B24;--muted:#5B6372;--line:#DCE0E6;
+  --accent:#D9480F;--accent-hover:#BF3E0B;--accent-ink:#FFFFFF;--accent-soft:#FDEBDF;--glow:#F59E0B;
+  --forge:#171C26;--forge-ink:#F4F5F7;--forge-muted:#A3ACBB;
+  --error:#B91C1C;--error-bg:#FDE8E8;--ok:#17724A;--ok-bg:#E1F2E9;
+  color-scheme:light;
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1117;--surface:#171B23;--surface-2:#1D222C;--ink:#E9ECF1;--muted:#9AA3B2;--line:#2A303B;
+    --accent:#FF7A3D;--accent-hover:#FF915E;--accent-ink:#1A0D05;--accent-soft:#3A1E10;--glow:#FBBF24;
+    --forge:#0A0D12;--forge-ink:#F4F5F7;--forge-muted:#8C95A5;
+    --error:#FF7B7B;--error-bg:#3A1717;--ok:#6ED39E;--ok-bg:#15301F;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1117;--surface:#171B23;--surface-2:#1D222C;--ink:#E9ECF1;--muted:#9AA3B2;--line:#2A303B;
+  --accent:#FF7A3D;--accent-hover:#FF915E;--accent-ink:#1A0D05;--accent-soft:#3A1E10;--glow:#FBBF24;
+  --forge:#0A0D12;--forge-ink:#F4F5F7;--forge-muted:#8C95A5;
+  --error:#FF7B7B;--error-bg:#3A1717;--ok:#6ED39E;--ok-bg:#15301F;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+a:hover{color:var(--accent-hover)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* header + hero */
+.site{background:var(--forge);color:var(--forge-ink);padding-top:env(safe-area-inset-top,0px)}
+.site-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.mark{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;font-size:28px;letter-spacing:.06em;color:var(--forge-ink);text-decoration:none}
+.mark i{font-style:normal;color:var(--accent)}
+.mark:hover{color:var(--forge-ink)}
+.site-nav a{color:var(--forge-muted);text-decoration:none;font-weight:600;font-size:15px;margin-left:20px}
+.site-nav a:hover,.site-nav a[aria-current="page"]{color:var(--forge-ink)}
+.hero{padding:56px 0 64px}
+.hero h1{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;font-size:clamp(44px,8vw,84px);line-height:.95;letter-spacing:.005em;margin:0 0 22px;max-width:12ch;text-wrap:balance}
+.hero p{color:var(--forge-muted);font-size:clamp(17px,2.2vw,19px);max-width:56ch;margin:0 0 28px}
+.hero .btn{font-size:16px}
+.ember{height:4px;background:linear-gradient(90deg,var(--accent) 0%,var(--glow) 55%,var(--accent) 100%)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;padding:12px 20px;font:inherit;font-weight:650;font-size:15px;cursor:pointer;text-decoration:none;background:var(--accent);color:var(--accent-ink)}
+.btn:hover{background:var(--accent-hover);color:var(--accent-ink)}
+.btn[disabled]{opacity:.6;cursor:progress}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--surface-2);color:var(--ink)}
+
+/* sections */
+section.block{padding:56px 0 8px}
+.block h2{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;font-size:40px;line-height:1;margin:0 0 8px}
+.block .lead{color:var(--muted);margin:0 0 24px;max-width:60ch}
+
+/* roles */
+.roles{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.roles li{border-bottom:1px solid var(--line)}
+.role-link{display:grid;grid-template-columns:1fr auto;gap:6px 20px;align-items:center;padding:20px 4px;color:var(--ink);text-decoration:none}
+.role-link:hover{color:var(--ink);background:var(--surface)}
+.role-title{font-weight:650;font-size:19px}
+.role-meta{display:flex;flex-wrap:wrap;gap:6px 16px;color:var(--muted);font-size:14.5px;grid-column:1}
+.role-cta{grid-row:1/span 2;grid-column:2;color:var(--accent);font-weight:650;font-size:15px}
+@media (max-width:560px){.role-link{grid-template-columns:1fr}.role-cta{grid-row:auto;grid-column:1}}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:4px solid var(--ink)}
+.steps li{counter-increment:s;padding:18px 18px 4px 0}
+.steps li::before{content:counter(s);display:block;font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;font-size:44px;line-height:1;color:var(--accent);margin-bottom:8px}
+.steps h3{margin:0 0 6px;font-size:17px}
+.steps p{margin:0;color:var(--muted);font-size:15px}
+@media (max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.promise{margin:28px 0 0;padding:18px 20px;background:var(--surface);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;max-width:68ch}
+.promise strong{display:block;margin-bottom:2px}
+
+/* job detail */
+.back{display:inline-block;margin:28px 0 0;font-weight:600;text-decoration:none}
+.job-head{padding:18px 0 28px;border-bottom:1px solid var(--line)}
+.job-head h1{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;font-size:clamp(36px,6vw,56px);line-height:1;margin:0 0 12px}
+.job-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:48px;padding:32px 0 64px;align-items:start}
+@media (max-width:900px){.job-grid{grid-template-columns:1fr;gap:32px}}
+.job-body h2{font-size:18px;margin:28px 0 8px}
+.job-body h2:first-child{margin-top:0}
+.job-body p{margin:0 0 12px;max-width:68ch}
+.job-body ul{margin:0 0 12px;padding-left:20px;max-width:68ch}
+.job-body li{margin-bottom:6px}
+
+/* form */
+.apply{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;position:sticky;top:20px}
+@media (max-width:900px){.apply{position:static}}
+.apply h2{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;font-size:32px;line-height:1;margin:0 0 6px}
+.apply .sub{color:var(--muted);font-size:14.5px;margin:0 0 20px}
+.field{display:flex;flex-direction:column;gap:5px;margin:0 0 14px}
+.field label,.field legend{font-size:14px;font-weight:600}
+.field .opt{font-weight:400;color:var(--muted)}
+.field .hint{font-size:13px;color:var(--muted)}
+.field .err{font-size:13px;color:var(--error);display:none}
+.field.invalid .err{display:block}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--error)}
+input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:100%}
+textarea{min-height:110px;resize:vertical}
+input[type=file]{font:inherit;font-size:14px;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:420px){.two{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.check input{margin-top:3px;width:18px;height:18px;accent-color:var(--accent);flex:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-error{display:none;background:var(--error-bg);color:var(--error);padding:10px 12px;border-radius:8px;font-size:14px;margin:0 0 14px}
+.form-error.show{display:block}
+.submit{width:100%;margin-top:4px}
+.done{text-align:left}
+.done h2{color:var(--ok)}
+.done ol{padding-left:20px;color:var(--muted);font-size:15px}
+
+footer{background:var(--forge);color:var(--forge-muted);padding:32px 0 calc(32px + env(safe-area-inset-bottom,0px));margin-top:64px;font-size:14px}
+footer p{margin:0 0 8px;max-width:80ch}
+footer a{color:var(--forge-ink)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap site-bar">
+    <a class="mark" href="/" aria-label="Trafforge home">TRAFF<i>O</i>RGE</a>
+    <nav class="site-nav" aria-label="Main"><a href="/">Home</a><a href="#roles" aria-current="page">Careers</a></nav>
+  </div>
+  <div id="heroWrap">
+    <div class="wrap hero">
+      <h1>Engineer the systems banks run on.</h1>
+      <p>Trafforge places senior engineers with fintech companies and banks across the United States. You’ll work on payments, lending, compliance and core banking, on teams that need your expertise from day one.</p>
+      <a class="btn" href="#roles">See open roles</a>
+    </div>
+  </div>
+  <div class="ember"></div>
+</header>
+
+<main id="main"></main>
+
+<footer>
+  <div class="wrap">
+    <p>Trafforge is an equal opportunity employer. We consider all qualified applicants without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability, veteran status or any other protected characteristic.</p>
+    <p>Need an accommodation to apply? <span id="contactLine">Let us know in your application and we’ll arrange it.</span></p>
+    <p>© <span id="yr"></span> Trafforge</p>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   CONFIGURATION — your developers edit this block.
+   ===================================================================== */
+const CONFIG = {
+  // Where the application form is POSTed (multipart/form-data). See README.
+  endpoint: "/api/careers/applications",
+  // Link to your privacy policy. Leave "" to hide the link.
+  privacyUrl: "/privacy",
+  // A monitored inbox for candidate questions. Leave "" to hide it.
+  contactEmail: "",
+  // Max resume size in MB (keep in sync with the backend).
+  maxResumeMB: 5
+};
+
+/* =====================================================================
+   OPEN ROLES — add, edit or remove jobs here. "slug" becomes the link:
+   /careers#senior-devops-cloud-engineer
+   ===================================================================== */
+const JOBS = [
+  {
+    slug: "senior-devops-cloud-engineer",
+    title: "Senior DevOps Cloud Engineer (Ansible SME)",
+    location: "Louisville, KY",
+    workplace: "Hybrid",
+    type: "Full-time",
+    summary: "Design, automate and run the cloud infrastructure behind mission-critical banking applications.",
+    about: [
+      "You’ll design, build and maintain cloud infrastructure that supports mission-critical applications for our fintech and banking partners. This is a hybrid role based in Louisville, KY, with part-time remote flexibility."
+    ],
+    responsibilities: [
+      "Automate infrastructure and operational processes with Ansible",
+      "Tune cloud environments for scale, efficiency and cost",
+      "Keep databases reliable, from setup through maintenance and optimization",
+      "Shape infrastructure and deployment strategy",
+      "Work closely with software and product teams so code and infrastructure fit together cleanly"
+    ],
+    qualifications: [
+      "Deep, hands-on Ansible experience, alongside other automation tools and practices",
+      "Strong software development and scripting skills",
+      "Solid grounding in configuration management and process automation",
+      "Expertise in at least one major cloud platform: AWS, Azure or GCP",
+      "Strong Linux administration and troubleshooting",
+      "Experience setting up, maintaining and optimizing databases"
+    ]
+  },
+  {
+    slug: "general-application",
+    title: "General application",
+    location: "United States",
+    workplace: "Remote, hybrid or on-site",
+    type: "Full-time or contract",
+    summary: "Don’t see the right role? Tell us what you do best and we’ll reach out when a match opens up.",
+    about: [
+      "We regularly place engineers with expertise in payments, lending, compliance and core banking systems. If that’s you, send us your details and we’ll keep you in mind for upcoming roles."
+    ],
+    responsibilities: [],
+    qualifications: [
+      "Professional engineering experience, ideally in fintech or financial services",
+      "Clear communication and comfort working inside client teams"
+    ]
+  }
+];
+
+/* ===================================================================== */
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const params=new URLSearchParams(location.search);
+const sourceParam=(params.get("source")||params.get("utm_source")||"").toLowerCase();
+const SOURCES=["LinkedIn","Trafforge website","Referral","Job board","Other"];
+const presetSource=sourceParam.includes("linkedin")?"LinkedIn":sourceParam.includes("refer")?"Referral":sourceParam?"Other":"";
+
+$("#yr").textContent=new Date().getFullYear();
+if(CONFIG.contactEmail){$("#contactLine").innerHTML=`Email <a href="mailto:${esc(CONFIG.contactEmail)}">${esc(CONFIG.contactEmail)}</a> and we’ll arrange it.`}
+
+function meta(j){return `<span>${esc(j.location)}</span><span>${esc(j.workplace)}</span><span>${esc(j.type)}</span>`}
+
+function listView(){
+  $("#heroWrap").hidden=false;
+  document.title="Careers at Trafforge";
+  $("#main").innerHTML=`
+  <section class="block" id="roles"><div class="wrap">
+    <h2>Open roles</h2>
+    <p class="lead">${JOBS.length===1?"One role":JOBS.length+" roles"} open right now. Each one is with a team that builds or runs financial systems.</p>
+    <ul class="roles">${JOBS.map(j=>`<li><a class="role-link" href="#${esc(j.slug)}">
+      <span class="role-title">${esc(j.title)}</span>
+      <span class="role-meta">${meta(j)}</span>
+      <span class="role-cta">View and apply</span></a></li>`).join("")}</ul>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <h2>How we hire</h2>
+    <p class="lead">Four steps, usually finished in two to four weeks.</p>
+    <ol class="steps">
+      <li><h3>Apply</h3><p>Send your resume. We confirm receipt within 1 business day.</p></li>
+      <li><h3>Screening call</h3><p>A 20–30 minute conversation about your experience and what you’re looking for.</p></li>
+      <li><h3>Team interviews</h3><p>Technical conversations with the engineers you’d work alongside.</p></li>
+      <li><h3>Decision</h3><p>A clear answer, by phone if it’s an offer, and feedback if you’d like it.</p></li>
+    </ol>
+    <p class="promise"><strong>You won’t be left waiting.</strong>Whatever stage you reach, you’ll hear from a real person within 3 business days, including when the answer is no.</p>
+  </div></section>`;
+}
+
+function jobView(j){
+  $("#heroWrap").hidden=true;
+  document.title=j.title+" at Trafforge";
+  const list=(t,a)=>a&&a.length?`<h2>${t}</h2><ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:"";
+  $("#main").innerHTML=`<div class="wrap">
+    <a class="back" href="#roles">All open roles</a>
+    <div class="job-head"><h1>${esc(j.title)}</h1><div class="role-meta">${meta(j)}</div></div>
+    <div class="job-grid">
+      <div class="job-body">
+        <h2>About the role</h2>${(j.about||[]).map(p=>`<p>${esc(p)}</p>`).join("")}
+        ${list("What you’ll do",j.responsibilities)}
+        ${list("What you’ll bring",j.qualifications)}
+        ${list("Nice to have",j.niceToHave)}
+      </div>
+      <aside class="apply" id="apply" aria-labelledby="applyTitle">${formHTML(j)}</aside>
+    </div></div>`;
+  wireForm(j);
+  window.scrollTo(0,0);
+}
+
+function formHTML(j){
+  return `<h2 id="applyTitle">Apply</h2>
+  <p class="sub">Takes about 3 minutes. Fields marked optional can be skipped.</p>
+  <div class="form-error" id="formError" role="alert"></div>
+  <form id="appForm" novalidate>
+    <div class="two">
+      <div class="field"><label for="first_name">First name</label><input type="text" id="first_name" name="first_name" autocomplete="given-name" required><span class="err">Enter your first name.</span></div>
+      <div class="field"><label for="last_name">Last name</label><input type="text" id="last_name" name="last_name" autocomplete="family-name" required><span class="err">Enter your last name.</span></div>
+    </div>
+    <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required><span class="err">Enter a valid email address.</span></div>
+    <div class="field"><label for="phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+    <div class="field"><label for="linkedin_url">LinkedIn profile <span class="opt">(optional)</span></label><input type="url" id="linkedin_url" name="linkedin_url" placeholder="https://www.linkedin.com/in/…"><span class="err">Enter a full link starting with https://</span></div>
+    <div class="field"><label for="location">Where are you based?</label><input type="text" id="location" name="location" autocomplete="address-level2" placeholder="City, State" required><span class="err">Tell us where you’re based.</span></div>
+    <div class="field"><label for="work_authorization">US work authorization</label>
+      <select id="work_authorization" name="work_authorization" required>
+        <option value="">Choose one</option>
+        <option>Authorized to work in the US without sponsorship</option>
+        <option>Will require visa sponsorship</option>
+      </select><span class="err">Choose an option.</span></div>
+    <div class="field"><label for="resume">Resume</label><input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+      <span class="hint">PDF or Word, up to ${CONFIG.maxResumeMB} MB.</span><span class="err" id="resumeErr">Attach your resume.</span></div>
+    <div class="field"><label for="cover_note">Anything you’d like us to know? <span class="opt">(optional)</span></label><textarea id="cover_note" name="cover_note" maxlength="3000"></textarea></div>
+    <div class="field"><label for="source">How did you hear about this role?</label>
+      <select id="source" name="source">${SOURCES.map(s=>`<option ${s===presetSource?"selected":""}>${s}</option>`).join("")}</select></div>
+    <div class="hp" aria-hidden="true"><label for="company_website">Leave this empty</label><input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off"></div>
+    <div class="field"><label class="check"><input type="checkbox" id="consent" name="consent" value="yes" required>
+      <span>I agree that Trafforge may store and use my details to assess my application${CONFIG.privacyUrl?`, as described in the <a href="${esc(CONFIG.privacyUrl)}" target="_blank" rel="noopener">privacy policy</a>`:""}.</span></label>
+      <span class="err">Please confirm so we can process your application.</span></div>
+    <button class="btn submit" type="submit" id="submitBtn">Submit application</button>
+  </form>`;
+}
+
+function wireForm(j){
+  const form=$("#appForm"),btn=$("#submitBtn"),fe=$("#formError");
+  const setInvalid=(id,bad,msg)=>{const f=document.getElementById(id).closest(".field");f.classList.toggle("invalid",bad);if(msg&&id==="resume")$("#resumeErr").textContent=msg;return bad};
+  function validate(){
+    let bad=false,first=null;
+    const mark=(id,cond,msg)=>{if(setInvalid(id,cond,msg)){bad=true;first=first||id}};
+    mark("first_name",!form.first_name.value.trim());
+    mark("last_name",!form.last_name.value.trim());
+    mark("email",!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value.trim()));
+    const li=form.linkedin_url.value.trim();mark("linkedin_url",!!li&&!/^https?:\/\/\S+\.\S+/.test(li));
+    mark("location",!form.location.value.trim());
+    mark("work_authorization",!form.work_authorization.value);
+    const f=form.resume.files[0];
+    if(!f)mark("resume",true,"Attach your resume.");
+    else if(!/\.(pdf|doc|docx)$/i.test(f.name))mark("resume",true,"Use a PDF or Word file.");
+    else if(f.size>CONFIG.maxResumeMB*1048576)mark("resume",true,`That file is over ${CONFIG.maxResumeMB} MB. Try a smaller PDF.`);
+    else setInvalid("resume",false);
+    mark("consent",!form.consent.checked);
+    if(first)document.getElementById(first).focus();
+    return !bad;
+  }
+  form.addEventListener("input",e=>{const f=e.target.closest(".field");if(f&&f.classList.contains("invalid"))f.classList.remove("invalid")});
+  form.addEventListener("submit",async e=>{
+    e.preventDefault();fe.classList.remove("show");
+    if(!validate())return;
+    if(form.company_website.value){showDone(j);return} // bot filled the honeypot
+    const data=new FormData(form);
+    data.append("job_slug",j.slug);data.append("job_title",j.title);
+    data.append("source_param",sourceParam);data.append("submitted_at",new Date().toISOString());
+    btn.disabled=true;btn.textContent="Sending…";
+    try{
+      const res=await fetch(CONFIG.endpoint,{method:"POST",body:data});
+      if(!res.ok)throw new Error("HTTP "+res.status);
+      showDone(j,form.first_name.value.trim());
+    }catch(err){
+      fe.textContent="Your application didn’t go through. Check your connection and try again"+(CONFIG.contactEmail?`, or email your resume to ${CONFIG.contactEmail}.`:".");
+      fe.classList.add("show");fe.scrollIntoView({block:"nearest"});
+      btn.disabled=false;btn.textContent="Submit application";
+    }
+  });
+}
+
+function showDone(j,first){
+  $("#apply").innerHTML=`<div class="done" role="status"><h2>Application received</h2>
+  <p>Thank you${first?", "+esc(first):""}. We’ve got your application for ${esc(j.title)}.</p>
+  <ol><li>You’ll get a confirmation email within 1 business day.</li><li>We review every application and will update you within 5 business days.</li><li>If it’s a fit, we’ll invite you to a short screening call.</li></ol>
+  <a class="btn ghost" href="#roles">See other roles</a></div>`;
+  $("#apply").scrollIntoView({block:"nearest"});
+}
+
+function route(){
+  const slug=decodeURIComponent(location.hash.slice(1));
+  const job=JOBS.find(j=>j.slug===slug);
+  if(job)jobView(job);
+  else{listView();if(slug==="roles"){const r=document.getElementById("roles");r&&r.scrollIntoView()}}
+}
+window.addEventListener("hashchange",route);
+route();
+})();
+</script>
+</body>
+</html>
